@@ -11,7 +11,7 @@ def constant_refinement(final_entity_list, refinement_field_index, model):
             model.mesh.field.setNumbers(
                 n + 1,
                 "RegionsList",
-                entities.get_tags(),
+                entities.get_tags() + entities.interfaces,
             )
             refinement_fields.extend((n + 1,))
 
